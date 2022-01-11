@@ -106,14 +106,14 @@ $insertion->execute( array(
 				 <!-- ouverture de la boucle while -->
                <?php while ( $commentaire = $resultat->fetch( PDO::FETCH_ASSOC )) { ?>
 			   <tr>
-                    <td class="bg-light"> <a href="update.php?id=<?php echo $commentaire['id_commentaires']; ?>">#<?php echo $commentaire['id_commentaires']; ?></a></td>
+                    <td class="bg-light"> <a href="update.php?id_commentaires=<?php echo $commentaire['id_commentaires']; ?>">#<?php echo $commentaire['id_commentaires']; ?></a></td>
 				   <td class="bg-success"><?php echo $commentaire['nom']; ?></td>
                    <td class="bg-info"><?php echo $commentaire['prenom']; ?></td>
                    <td class="bg-warning"><?php echo $commentaire['email']; ?></td>
                    <td class="bg-info"><?php echo $commentaire['sexe']; ?></td>
 				   <td class="bg-light"><?php echo $commentaire['message']; ?></td>
 				   <td class="bg-secondary"><?php echo $commentaire['date_enregistrement']; ?></td>
-                   <td class="bg-danger"><a href="delete.php? id=<?php echo $commentaire['id_commentaires']?>" style="color:black;"><i class="bi bi-trash-fill"></i></a></td>
+                   <td class="bg-danger"><a href="delete.php? id_commentaires=<?php echo $commentaire['id_commentaires']?>" style="color:black;"><i class="bi bi-trash-fill"></i></a></td>
 			   </tr>
 			   <!-- fermeture de la boucle -->
 			   <?php } ?>
